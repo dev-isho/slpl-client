@@ -6,7 +6,7 @@
         slpl-client
       </h1>
       <h2 class="subtitle">
-        Football Site
+        Football Site Yaaa
       </h2>
       <div class="links">
         <a
