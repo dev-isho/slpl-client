@@ -3,11 +3,11 @@
     <p class="mb-2 ml-2 md:mb-10">Fixtures</p>
     <div class="" v-for="(match, index) in Fixtures" :key="index">
       <p
-        class="pb-2 border-b text-xs pl-2"
+        class="pb-2 border-b text-xs pl-2 pt-10"
       >{{new Date(match.date).toDateString()}}</p>
       <div>
         <div v-for="(game, index) in match.games" :key="index">
-          <div class="flex flex-wrap border-b pb-2 mb-10 items-center border-b">
+          <div class="flex flex-wrap border-b pb-2 items-center border-b">
             <div class="w-full md:w-2/3 flex items-center justify-center mt-4">
               <div
                 class="w-2/3 mx-2 text-right text-xs flex justify-end items-center"
