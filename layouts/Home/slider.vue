@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 lg:py-16">
+  <div class="py-1 lg:py-16">
     <div class="flex flex-wrap">
       <div class="w-full md:w-3/5 lg:w-2/3 md:pr-5 lg:pr-10 py-2 md:py-0">
         <div class="shadow-lg rounded bg-white p-2">
@@ -27,13 +27,13 @@
             <div>
               <p class="pt-4 pl-2 text-main text-sm">Live Score</p>
               <div class="mt-2">
-                <p class="text-xs text-grey-darker md:px-2 lg:px-4 py-2">Saturday 2 February</p>
-                <div class="border-b px-5 md:px-2 lg:px-5 text-xs flex justify-between py-2">
+                <p class="text-xs text-grey-darker md:px-2 lg:px-4 py-2 px-4">Saturday 2 February</p>
+                <div class="border-b px-4 md:px-2 lg:px-5 text-xs flex justify-between py-2">
                   <div class="flex items-center pr-2">0'</div>
                   <div class="flex items-center">
                     <span>Anti Drugs FC</span>
                     <img
-                      class="h-10 w-10 md:h-8 md:w-8 mx-2"
+                      class="h-8 w-8 ml-1 mr-2"
                       :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
                     >
                   </div>
@@ -46,7 +46,7 @@
                   </div>
                   <div class="flex items-center">
                     <img
-                      class="h-10 w-10 md:h-8 md:w-8 mx-2"
+                      class="h-8 w-8 ml-2 mr-1"
                       :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
                     >
                     <span>Bo Rangers FC</span>
@@ -57,12 +57,12 @@
             <div>
               <p class="pt-4 pl-2 text-main text-sm">Results</p>
               <div class="mt-2">
-                <p class="text-xs text-grey-darker px-4 md:px-2 lg:px-4 py-2">Saturday 2 February</p>
-                <div class="border-b px-5 md:px-4 lg:px-5 text-xs flex justify-between py-2">
+                <p class="text-xs text-grey-darker px-4 md:px-2 lg:px-4 py-4">Saturday 2 February</p>
+                <div class="border-b px-4 md:px-4 lg:px-5 text-xs flex justify-between py-2">
                   <div class="flex items-center">
                     <span>Anti Drugs FC</span>
                     <img
-                      class="h-10 w-10 md:h-8 md:w-8 mx-2"
+                      class="h-8 w-8 ml-1 mr-2"
                       :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
                     >
                   </div>
@@ -75,7 +75,7 @@
                   </div>
                   <div class="flex items-center">
                     <img
-                      class="h-10 w-10 md:h-8 md:w-8 mx-2"
+                      class="h-8 w-8 ml-2 mr-1"
                       :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
                     >
                     <span>Bo Rangers FC</span>

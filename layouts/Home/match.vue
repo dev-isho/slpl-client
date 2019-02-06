@@ -3,28 +3,28 @@
     <div class="w-full lg:w-1/2 py-2 lg:py-0 sm:w-1/2 md:w-full">
       <div class="mx-2 sm:mx-1 md:mx-0 lg:mx-2 rounded shadow overflow-hidden">
         <p class="bg-green py-2 text-center text-white font-semibold">Match</p>
-        <div class="border-b px-5 sm:px-2 md:px-4 text-xs flex justify-between py-2 bg-white">
+        <div class="border-b px-2 sm:px-2 md:px-4 text-xs flex justify-between py-2 bg-white">
           <div class="flex items-center sm:pr-2">
             <span>Anti Drugs FC</span>
             <img
-              class="h-8 w-8 lg:h-8 lg:w-8 ml-2"
+              class="h-8 w-8 lg:h-8 lg:w-8 mx-2"
               :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
             >
           </div>
           <div class="flex items-center">
             <div class="bg-main p-1 text-white">
-              <span class="mx-2 sm:mx-1">VS</span>
+              <span class="mx-1 sm:mx-1">VS</span>
             </div>
           </div>
           <div class="flex sm:pl-2 items-center">
             <img
-              class="h-8 w-8 lg:h-8 lg:w-8 mr-2"
+              class="h-8 w-8 lg:h-8 lg:w-8 mx-2"
               :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
             >
             <span>Bo Rangers FC</span>
           </div>
         </div>
-        <div class="px-5 py-2 rounded-b bg-white">
+        <div class="px-2 md:px-5 py-2 rounded-b bg-white">
           <button class="text-sm bg-main w-full py-2 text-white rounded">View All</button>
         </div>
       </div>
@@ -59,7 +59,7 @@
           <div class="w-12 text-center">4</div>
           <div class="w-12 text-center">2</div>
         </div>
-        <div class="px-5 py-2 rounded-b bg-white">
+        <div class="px-2 md:px-5 py-2 rounded-b bg-white">
           <button class="text-sm bg-main w-full py-2 text-white rounded">View All</button>
         </div>
       </div>
