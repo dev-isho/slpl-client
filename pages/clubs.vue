@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-wrap p-5">
+    <div class="flex flex-wrap py-2 px-2 md:p-5">
       <div
         class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex flex-col"
         v-for="(team, index) in Teams"
@@ -9,7 +9,7 @@
         <div class="bg-white shadow-md rounded overflow-hidden flex flex-col flex-1 m-1">
           <div class="flex h-24 md:h-32 bg-main p-1 items-center justify-center">
             <img
-              class="h-24 w-24"
+              class="h-24 w-24 p-2 md:p-0"
               :src="`https://slpl-server.herokuapp.com/image/${team.image}`"
               alt
             >
