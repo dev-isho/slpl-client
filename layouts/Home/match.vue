@@ -1,24 +1,24 @@
 <template>
-  <div class="mt-10 flex">
-    <div class="w-1/2">
-      <div class="mx-2 rounded shadow overflow-hidden">
+  <div class="mt-5 lg:mt-10 flex flex-wrap">
+    <div class="w-full lg:w-1/2 py-2 lg:py-0 sm:w-1/2 md:w-full">
+      <div class="mx-2 sm:mx-1 md:mx-0 lg:mx-2 rounded shadow overflow-hidden">
         <p class="bg-green py-2 text-center text-white font-semibold">Match</p>
-        <div class="border-b px-5 text-xs flex justify-between py-2 bg-white">
-          <div class="flex items-center">
+        <div class="border-b px-5 sm:px-2 md:px-4 text-xs flex justify-between py-2 bg-white">
+          <div class="flex items-center sm:pr-2">
             <span>Anti Drugs FC</span>
             <img
-              class="h-10 w-10 lg:h-8 lg:w-8 ml-2"
+              class="h-8 w-8 lg:h-8 lg:w-8 ml-2"
               :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
             >
           </div>
           <div class="flex items-center">
             <div class="bg-main p-1 text-white">
-              <span class="mx-2">VS</span>
+              <span class="mx-2 sm:mx-1">VS</span>
             </div>
           </div>
-          <div class="flex items-center">
+          <div class="flex sm:pl-2 items-center">
             <img
-              class="h-10 w-10 lg:h-8 lg:w-8 mr-2"
+              class="h-8 w-8 lg:h-8 lg:w-8 mr-2"
               :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
             >
             <span>Bo Rangers FC</span>
@@ -29,8 +29,8 @@
         </div>
       </div>
     </div>
-    <div class="w-1/2">
-      <div class="mx-2 rounded rounded overflow-hidden shadow">
+    <div class="w-full lg:w-1/2 pt-2 lg:py-0 sm:w-1/2 md:w-full">
+      <div class="mx-2 sm:mx-1 md:mx-0 lg:mx-2 rounded rounded overflow-hidden shadow">
         <p class="bg-green py-2 text-center text-white font-semibold">Table</p>
         <div class="bg-white text-main text-xs lg:text-xs flex py-2 px-1 font-semibold">
           <div class="w-12 text-center">Pos</div>

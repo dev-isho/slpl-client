@@ -1,171 +1,7 @@
 <template>
-  <div class="py-16">
-    <div class="flex">
-      <div class="w-1/3">
-        <div class="shadow-lg">
-          <div class="bg-green h-1 rounded-t"></div>
-          <div class="bg-white rounded-b overflow-hidden">
-            <p class="text-center pt-4 text-main font-semibold">Premier League Board</p>
-            <div>
-              <p class="pt-4 pl-2 text-main text-sm">Live Score</p>
-              <div class="mt-2">
-                <p class="text-xs text-grey-darker px-4 py-2">Saturday 2 February</p>
-                <div class="border-b px-5 text-xs flex justify-between py-2">
-                  <div class="flex items-center">0'</div>
-                  <div class="flex items-center">
-                    <span>Anti Drugs FC</span>
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 ml-2"
-                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="bg-main p-1 text-white">
-                      <span>0</span>
-                      <span class="mx-1">-</span>
-                      <span>1</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 mr-2"
-                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-                    >
-                    <span>Bo Rangers FC</span>
-                  </div>
-                </div>
-                <div class="border-b px-5 text-xs flex justify-between py-2">
-                  <div class="flex items-center">0'</div>
-                  <div class="flex items-center">
-                    <span>Anti Drugs FC</span>
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 ml-2"
-                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="bg-main p-1 text-white">
-                      <span>0</span>
-                      <span class="mx-1">-</span>
-                      <span>1</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 mr-2"
-                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-                    >
-                    <span>Bo Rangers FC</span>
-                  </div>
-                </div>
-                <div class="border-b px-5 text-xs flex justify-between py-2">
-                  <div class="flex items-center">0'</div>
-                  <div class="flex items-center">
-                    <span>Anti Drugs FC</span>
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 ml-2"
-                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="bg-main p-1 text-white">
-                      <span>0</span>
-                      <span class="mx-1">-</span>
-                      <span>1</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 mr-2"
-                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-                    >
-                    <span>Bo Rangers FC</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <p class="pt-4 pl-2 text-main text-sm">Results</p>
-              <div class="mt-2">
-                <p class="text-xs text-grey-darker px-4 py-2">Saturday 2 February</p>
-                <div class="border-b px-5 text-xs flex justify-between py-2">
-                  <div class="flex items-center">
-                    <span>Anti Drugs FC</span>
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 ml-2"
-                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="bg-main p-1 text-white">
-                      <span>0</span>
-                      <span class="mx-1">-</span>
-                      <span>1</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 mr-2"
-                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-                    >
-                    <span>Bo Rangers FC</span>
-                  </div>
-                </div>
-                <div class="border-b px-5 text-xs flex justify-between py-2">
-                  <div class="flex items-center">
-                    <span>Anti Drugs FC</span>
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 ml-2"
-                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="bg-main p-1 text-white">
-                      <span>0</span>
-                      <span class="mx-1">-</span>
-                      <span>1</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 mr-2"
-                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-                    >
-                    <span>Bo Rangers FC</span>
-                  </div>
-                </div>
-                <div class="border-b px-5 text-xs flex justify-between py-2">
-                  <div class="flex items-center">
-                    <span>Anti Drugs FC</span>
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 ml-2"
-                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
-                    >
-                  </div>
-                  <div class="flex items-center">
-                    <div class="bg-main p-1 text-white">
-                      <span>0</span>
-                      <span class="mx-1">-</span>
-                      <span>1</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <img
-                      class="h-10 w-10 lg:h-8 lg:w-8 mr-2"
-                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-                    >
-                    <span>Bo Rangers FC</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <button class="text-sm bg-main w-full py-4 text-white rounded">View All</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-2/3 ml-10">
+  <div class="py-4 lg:py-16">
+    <div class="flex flex-wrap">
+      <div class="w-full md:w-3/5 lg:w-2/3 md:pr-5 lg:pr-10 py-2 md:py-0">
         <div class="shadow-lg rounded bg-white p-2">
           <div id="slider">
             <figure class="mx-2">
@@ -181,6 +17,77 @@
         <div>
           <matchVue/>
           <latestNews/>
+        </div>
+      </div>
+      <div class="w-full md:w-2/5 lg:w-1/3">
+        <div class="shadow-lg">
+          <div class="bg-green h-1 rounded-t"></div>
+          <div class="bg-white rounded-b overflow-hidden">
+            <p class="text-center pt-4 text-main font-semibold">Premier League Board</p>
+            <div>
+              <p class="pt-4 pl-2 text-main text-sm">Live Score</p>
+              <div class="mt-2">
+                <p class="text-xs text-grey-darker md:px-2 lg:px-4 py-2">Saturday 2 February</p>
+                <div class="border-b px-5 md:px-2 lg:px-5 text-xs flex justify-between py-2">
+                  <div class="flex items-center pr-2">0'</div>
+                  <div class="flex items-center">
+                    <span>Anti Drugs FC</span>
+                    <img
+                      class="h-10 w-10 md:h-8 md:w-8 mx-2"
+                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <div class="flex bg-main p-1 text-white">
+                      <span>0</span>
+                      <span class="px-1">-</span>
+                      <span>1</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      class="h-10 w-10 md:h-8 md:w-8 mx-2"
+                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
+                    >
+                    <span>Bo Rangers FC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p class="pt-4 pl-2 text-main text-sm">Results</p>
+              <div class="mt-2">
+                <p class="text-xs text-grey-darker px-4 md:px-2 lg:px-4 py-2">Saturday 2 February</p>
+                <div class="border-b px-5 md:px-4 lg:px-5 text-xs flex justify-between py-2">
+                  <div class="flex items-center">
+                    <span>Anti Drugs FC</span>
+                    <img
+                      class="h-10 w-10 md:h-8 md:w-8 mx-2"
+                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <div class="flex bg-main p-1 text-white">
+                      <span>0</span>
+                      <span class="px-1">-</span>
+                      <span>1</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      class="h-10 w-10 md:h-8 md:w-8 mx-2"
+                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
+                    >
+                    <span>Bo Rangers FC</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="p-5">
+              <button class="text-sm bg-main w-full py-4 text-white rounded">View All</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -215,7 +122,7 @@ export default {
 #slider figure img {
   width: 20%;
   float: left;
-  height: 23rem;
+  height: 20rem;
 }
 
 @keyframes slider {

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-grey-lighter">
-    <div class="mx-16 px-10">
+    <div class="mx-5 sm:mx-2 md:mx-1  lg:mx-16 lg:px-10">
         <Slider/>
       </div>
   </div>
