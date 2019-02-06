@@ -81,7 +81,6 @@
                     <span>Bo Rangers FC</span>
                   </div>
                 </div>
-
               </div>
             </div>
             <div class="p-5">
@@ -96,7 +95,7 @@
 
 <script>
 import latestNews from "./latest-news.vue";
-import matchVue from './match.vue';
+import matchVue from "./match.vue";
 
 export default {
   components: {
@@ -122,7 +121,7 @@ export default {
 #slider figure img {
   width: 20%;
   float: left;
-  height: 20rem;
+  height: 18rem;
 }
 
 @keyframes slider {
