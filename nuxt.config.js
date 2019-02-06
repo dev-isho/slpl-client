@@ -4,9 +4,6 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
-  /*
-  ** Headers of the page
-  */
   head: {
     title: pkg.name,
     meta: [
@@ -19,39 +16,21 @@ module.exports = {
     ]
   },
 
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
 
-  /*
-  ** Global CSS
-  */
   css: [
     '~/assets/css/tailwind.css'
   ],
 
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
+  plugins: ['~plugins/apolloClient'],
 
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
   ],
 
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    vendor: ['isomorphic-fetch', 'apollo-client', 'graphql-tag'],
     extend(config, ctx) {
-      
+
     }
   }
 }

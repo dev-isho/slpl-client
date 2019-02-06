@@ -20,10 +20,12 @@
       <nuxt-link
         to="/"
         exact
+        @click="open = false"
         active-class="bg-green"
         class="text-white p-5 text-sm block no-underline items-center"
       >Home</nuxt-link>
       <nuxt-link
+        @click="open = false"
         active-class="bg-green"
         to="/news"
         class="text-white p-5 text-sm block no-underline items-center"

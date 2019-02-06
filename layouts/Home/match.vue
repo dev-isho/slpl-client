@@ -3,25 +3,35 @@
     <div class="w-full lg:w-1/2 py-2 lg:py-0 sm:w-1/2 md:w-full">
       <div class="sm:mx-1 md:mx-0 lg:mx-2 rounded shadow overflow-hidden">
         <p class="bg-green py-2 text-center text-white font-semibold">Match</p>
-        <div class="border-b px-2 sm:px-2 md:px-4 text-xs flex justify-between py-2 bg-white">
-          <div class="flex items-center sm:pr-2">
-            <span>Anti Drugs FC</span>
-            <img
-              class="h-8 w-8 lg:h-8 lg:w-8 mx-2"
-              :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
-            >
-          </div>
-          <div class="flex items-center">
-            <div class="bg-main p-1 text-white">
-              <span class="mx-1 sm:mx-1">VS</span>
+
+        <p
+          class="text-xs bg-white text-grey-darker md:px-2 lg:px-4 pt-4 px-4"
+        >{{new Date(Match.date).toDateString()}}</p>
+        <div class="border-b pb-1 bg-white" v-for="(game, index) in Match.games" :key="index">
+          <div class="px-2 sm:px-2 md:px-4 text-xs flex justify-between py-2 bg-white">
+            <div class="flex items-center sm:pr-2">
+              <span>{{game.home.name}}</span>
+              <img
+                class="h-8 w-8 lg:h-8 lg:w-8 mx-2"
+                :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`"
+              >
+            </div>
+            <div class="flex items-center">
+              <div class="bg-main p-1 text-white">
+                <span class="mx-1 sm:mx-1">VS</span>
+              </div>
+            </div>
+            <div class="flex sm:pl-2 items-center">
+              <img
+                class="h-8 w-8 lg:h-8 lg:w-8 mx-2"
+                :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`"
+              >
+              <span>{{game.away.name}}</span>
             </div>
           </div>
-          <div class="flex sm:pl-2 items-center">
-            <img
-              class="h-8 w-8 lg:h-8 lg:w-8 mx-2"
-              :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-            >
-            <span>Bo Rangers FC</span>
+          <div class="flex w-full bg-white items-center justify-center mt-1">
+            <img class="w-6 h-6 -mt-2" src="../../assets/stadium.png" alt>
+            <span class="text-xs ml-2">{{game.home.stadium}}</span>
           </div>
         </div>
         <div class="px-2 md:px-5 py-2 rounded-b bg-white">
@@ -42,7 +52,11 @@
         <div class="bg-white text-main text-xs lg:text-sm items-center flex py-1 px-1 border-b">
           <div class="w-12 text-center">1</div>
           <div class="w-1/2 items-center flex">
-            <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`" alt>
+            <img
+              class="w-8 h-8"
+              :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
+              alt
+            >
             <p class="ml-5 lg:ml-2">jhklk</p>
           </div>
           <div class="w-12 text-center">1</div>
@@ -52,7 +66,11 @@
         <div class="bg-white text-main text-xs lg:text-sm items-center flex py-1 px-1 border-b">
           <div class="w-12 text-center">1</div>
           <div class="w-1/2 items-center flex">
-            <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`" alt>
+            <img
+              class="w-8 h-8"
+              :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
+              alt
+            >
             <p class="ml-5 lg:ml-2">jhklk</p>
           </div>
           <div class="w-12 text-center">1</div>
@@ -68,7 +86,46 @@
 </template>
 
 <script>
-export default {};
+import apolloClient from "../../plugins/apolloClient.js";
+import gql from "graphql-tag";
+
+const gameQuery = gql`
+  query NextGame {
+    NextGame {
+      _id
+      date
+      games {
+        home {
+          name
+          image
+          stadium
+        }
+        away {
+          name
+          image
+        }
+      }
+    }
+  }
+`;
+
+export default {
+  data() {
+    return {
+      Match: ""
+    };
+  },
+  methods: {
+    nextMatch: function() {
+      apolloClient.query({ query: gameQuery }).then(res => {
+        this.Match = res.data.NextGame;
+      });
+    }
+  },
+  created() {
+    this.nextMatch();
+  }
+};
 </script>
 
 <style>

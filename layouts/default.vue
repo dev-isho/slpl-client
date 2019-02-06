@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-grey-light">
     <Nav/>
     <nuxt/>
     <Footer/>
