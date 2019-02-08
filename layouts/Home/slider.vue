@@ -56,29 +56,35 @@
             </div>
             <div>
               <p class="pt-4 pl-2 text-main text-sm">Results</p>
-              <div class="mt-2">
-                <p class="text-xs text-grey-darker px-4 md:px-2 lg:px-4 py-4">Saturday 2 February</p>
-                <div class="border-b px-4 md:px-4 lg:px-5 text-xs flex justify-between py-2">
-                  <div class="flex items-center">
-                    <span>Anti Drugs FC</span>
+              <div class="mt-2" v-for="(result, index) in Results" :key="index">
+                <p
+                  class="text-xs text-grey-darker px-4 md:px-2 lg:px-4 py-4"
+                >{{new Date(result.date).toDateString()}}</p>
+                <div
+                  class="border-b px-4 md:px-4 lg:px-5 text-xs flex justify-between py-2"
+                  v-for="(game, index) in result.games"
+                  :key="index"
+                >
+                  <div class="flex items-center w-2/3 justify-end">
+                    <span>{{game.home.name}}</span>
                     <img
                       class="h-8 w-8 ml-1 mr-2"
-                      :src="`https://slpl-server.herokuapp.com/image/ANTI DRUGS TEAM.png`"
+                      :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`"
                     >
                   </div>
-                  <div class="flex items-center">
+                  <div class="flex items-center mx-2">
                     <div class="flex bg-main p-1 text-white">
-                      <span>0</span>
-                      <span class="px-1">-</span>
-                      <span>1</span>
+                      <span>{{game.homeGoals}}</span>
+                      <span class="mx-1">-</span>
+                      <span>{{game.awayGoals}}</span>
                     </div>
                   </div>
-                  <div class="flex items-center">
+                  <div class="flex items-center w-2/3">
                     <img
                       class="h-8 w-8 ml-2 mr-1"
-                      :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
+                      :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`"
                     >
-                    <span>Bo Rangers FC</span>
+                    <span>{{game.away.name}}</span>
                   </div>
                 </div>
               </div>
@@ -96,8 +102,47 @@
 <script>
 import latestNews from "./latest-news.vue";
 import matchVue from "./match.vue";
+import apolloClient from "../../plugins/apolloClient.js";
+import gql from "graphql-tag";
+
+const gameQuery = gql`
+  query Results {
+    Results {
+      date
+      season
+      games {
+        home {
+          name
+          image
+          stadium
+        }
+        away {
+          name
+          image
+        }
+        homeGoals
+        awayGoals
+      }
+    }
+  }
+`;
 
 export default {
+  data() {
+    return {
+      Results: ""
+    };
+  },
+  methods: {
+    allResults: function() {
+      apolloClient.query({ query: gameQuery }).then(res => {
+        this.Results = res.data.Results.slice(0, 2);
+      });
+    }
+  },
+  created() {
+    this.allResults();
+  },
   components: {
     latestNews,
     matchVue
