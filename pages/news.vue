@@ -3,7 +3,7 @@
     <div class="lg:mx-16 lg:my-10 md:mx-8 md:my-5 mx-5">
       <div class="flex flex-wrap">
         <div
-          class="w-1/2 cursor-pointer flex flex-col lg:w-1/5 md:w-1/4 sm:w-1/3"
+          class="w-1/2 cursor-pointer flex flex-col lg:w-1/5 md:w-1/4 sm:w-1/3 cursor-pointer"
           v-for="(item, index) in News"
           :key="index"
           @click="viewNews(item._id)"
@@ -38,6 +38,7 @@ import gql from "graphql-tag";
 const newsQuery = gql`
   query News {
     News {
+      _id
       date
       title
       subTitle
@@ -58,6 +59,9 @@ export default {
       apolloClient.query({ query: newsQuery }).then(res => {
         this.News = res.data.News;
       });
+    },
+    viewNews: function(id) {
+      this.$router.push("/news/view/" + id);
     }
   },
   created() {
