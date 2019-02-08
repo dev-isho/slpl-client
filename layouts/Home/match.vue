@@ -49,33 +49,23 @@
           <div class="w-12 text-center">GD</div>
           <div class="w-12 text-center">Pts</div>
         </div>
-        <div class="bg-white text-main text-xs lg:text-sm items-center flex py-1 px-1 border-b">
-          <div class="w-12 text-center">1</div>
-          <div class="w-1/2 items-center flex">
-            <img
-              class="w-8 h-8"
-              :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-              alt
-            >
-            <p class="ml-5 lg:ml-2">jhklk</p>
+        <div v-for="(tb, index) in Table" :key="index">
+          <div v-for="(table, index) in tb.table" :key="index">
+            <div v-if="index <= 5" class="bg-white text-main text-xs lg:text-xs items-center flex py-1 px-1 border-b">
+              <div class="w-12 text-center">{{index + 1}}</div>
+              <div class="w-1/2 items-center flex">
+                <img
+                  class="w-8 h-8"
+                  :src="`https://slpl-server.herokuapp.com/image/${table.team.image}`"
+                  alt
+                >
+                <p class="ml-5 lg:ml-2">{{table.team.name}}</p>
+              </div>
+              <div class="w-12 text-center">{{table.played}}</div>
+              <div class="w-12 text-center">{{table.gd}}</div>
+              <div class="w-12 text-center">{{table.point}}</div>
+            </div>
           </div>
-          <div class="w-12 text-center">1</div>
-          <div class="w-12 text-center">4</div>
-          <div class="w-12 text-center">2</div>
-        </div>
-        <div class="bg-white text-main text-xs lg:text-sm items-center flex py-1 px-1 border-b">
-          <div class="w-12 text-center">1</div>
-          <div class="w-1/2 items-center flex">
-            <img
-              class="w-8 h-8"
-              :src="`https://slpl-server.herokuapp.com/image/Bo Rangers team.png`"
-              alt
-            >
-            <p class="ml-5 lg:ml-2">jhklk</p>
-          </div>
-          <div class="w-12 text-center">1</div>
-          <div class="w-12 text-center">4</div>
-          <div class="w-12 text-center">2</div>
         </div>
         <div class="px-2 md:px-5 py-2 rounded-b bg-white">
           <button class="text-sm bg-main w-full py-2 text-white rounded">View All</button>
@@ -109,10 +99,36 @@ const gameQuery = gql`
   }
 `;
 
+const queryTable = gql`
+  query Table {
+    Table {
+      _id
+      table {
+        team {
+          name
+          image
+        }
+        point
+        win
+        draw
+        lost
+        gf
+        ga
+        gd
+        played
+        form {
+          status
+        }
+      }
+    }
+  }
+`;
+
 export default {
   data() {
     return {
-      Match: ""
+      Match: "",
+      Table: ""
     };
   },
   methods: {
@@ -120,10 +136,16 @@ export default {
       apolloClient.query({ query: gameQuery }).then(res => {
         this.Match = res.data.NextGame;
       });
+    },
+    allTable: function() {
+      apolloClient.query({ query: queryTable }).then(res => {
+        this.Table = res.data.Table;
+      });
     }
   },
   created() {
     this.nextMatch();
+    this.allTable();
   }
 };
 </script>
