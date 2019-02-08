@@ -48,8 +48,8 @@
           <div class="w-12 text-center hidden md:block">Win</div>
           <div class="w-12 text-center hidden md:block">Draw</div>
           <div class="w-12 text-center hidden md:block">Loss</div>
-          <div class="w-12 text-center hidden md:block">GF</div>
-          <div class="w-12 text-center hidden md:block">GA</div>
+          <div class="w-12 text-center hidden sm:block">GF</div>
+          <div class="w-12 text-center hidden sm:block">GA</div>
           <div class="w-12 text-center">GD</div>
           <div class="w-12 text-center">Pts</div>
           <div class="w-12 text-center hidden lg:block">Form</div>
@@ -69,8 +69,8 @@
             <div class="w-12 text-center hidden md:block">{{table.win}}</div>
             <div class="w-12 text-center hidden md:block">{{table.draw}}</div>
             <div class="w-12 text-center hidden md:block">{{table.lost}}</div>
-            <div class="w-12 text-center hidden md:block">{{table.gf}}</div>
-            <div class="w-12 text-center hidden md:block">{{table.ga}}</div>
+            <div class="w-12 text-center hidden sm:block">{{table.gf}}</div>
+            <div class="w-12 text-center hidden sm:block">{{table.ga}}</div>
             <div class="w-12 text-center">{{table.gd}}</div>
             <div class="w-12 text-center">{{table.point}}</div>
             <div class="hidden lg:flex" v-for="(form, index) in table.form" :key="index">
