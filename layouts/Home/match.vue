@@ -51,7 +51,7 @@
         </div>
         <div v-for="(tb, index) in Table" :key="index">
           <div v-for="(table, index) in tb.table" :key="index">
-            <div v-if="index <= 5" class="bg-white text-main text-xs lg:text-xs items-center flex py-1 px-1 border-b">
+            <div v-if="index <= 4" class="bg-white text-main text-xs lg:text-xs items-center flex py-1 px-1 border-b">
               <div class="w-12 text-center">{{index + 1}}</div>
               <div class="w-1/2 items-center flex">
                 <img
