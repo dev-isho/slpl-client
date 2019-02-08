@@ -5,11 +5,11 @@
         <div class="shadow-lg rounded bg-white p-2">
           <div id="slider">
             <figure class="mx-2">
-              <img :src="`https://slpl-server.herokuapp.com/image/Slider/east_end_lions_.jpeg`">
-              <img :src="`https://slpl-server.herokuapp.com/image/Slider/east_end_tigers_fc_squad.jpeg`">
-              <img :src="`https://slpl-server.herokuapp.com/image/Slider/mighty_black_pool.jpeg`">
-              <img :src="`https://slpl-server.herokuapp.com/image/Slider/mighty_black_pool.jpeg`">
-              <img :src="`https://slpl-server.herokuapp.com/image/Slider/east_end_lions_.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/slider1.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/slider2.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/slider3.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/slider4.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/slider1.jpeg`">
             </figure>
           </div>
         </div>
