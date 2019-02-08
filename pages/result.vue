@@ -11,7 +11,7 @@
                 <span class="mr-2">{{game.home.name}}</span>
                 <img
                   class="w-8 h-8"
-                  :src="`http://192.168.8.108:4000/image/${game.home.image}`"
+                  :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`"
                   alt
                 >
               </div>
@@ -21,7 +21,7 @@
               <div class="w-2/3 mx-2 text-sm flex items-center">
                 <img
                   class="w-8 h-8"
-                  :src="`http://192.168.8.108:4000/image/${game.away.image}`"
+                  :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`"
                   alt
                 >
                 <span class="ml-2 text-xs">{{game.away.name}}</span>
