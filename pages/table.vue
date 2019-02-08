@@ -62,7 +62,7 @@
           >
             <div class="w-12 text-center">{{index + 1}}</div>
             <div class="w-1/2 md:w-2/5 pl-2 flex items-center text-xs">
-              <img class="w-8 h-8" :src="`http://192.168.8.108:4000/image/${table.team.image}`" alt>
+              <img class="w-8 h-8" :src="`https://slpl-server.herokuapp.com/image/${table.team.image}`" alt>
               <p class="ml-5">{{table.team.name}}</p>
             </div>
             <div class="w-12 text-center">{{table.played}}</div>
@@ -73,10 +73,10 @@
             <div class="w-12 text-center hidden md:block">{{table.ga}}</div>
             <div class="w-12 text-center">{{table.gd}}</div>
             <div class="w-12 text-center">{{table.point}}</div>
-            <div class="flex ml-2" v-for="(form, index) in table.form" :key="index">
-              <p v-if="form.status === 'W'" class="mr-1 bg-green w-5 justify-center text-xs block flex items-center font-semibold p-1 rounded text-white">W</p>
-              <p v-if="form.status === 'L'" class="mr-1 bg-red w-5 justify-center text-xs block flex items-center font-semibold p-1 rounded text-white">L</p>
-              <p v-if="form.status === 'D'" class="mr-1 bg-grey-darkest justify-center w-5 text-xs block flex items-center font-semibold p-1 rounded text-white">D</p>
+            <div class="hidden lg:flex" v-for="(form, index) in table.form" :key="index">
+              <p v-if="form.status === 'W'" class="mr-1 bg-green w-5 justify-center text-xs flex items-center font-semibold p-1 rounded text-white">W</p>
+              <p v-if="form.status === 'L'" class="mr-1 bg-red w-5 justify-center text-xs flex items-center font-semibold p-1 rounded text-white">L</p>
+              <p v-if="form.status === 'D'" class="mr-1 bg-grey-darkest justify-center w-5 text-xs flex items-center font-semibold p-1 rounded text-white">D</p>
             </div>
           </div>
         </div>
