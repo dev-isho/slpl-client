@@ -9,7 +9,7 @@
         >{{new Date(Match.date).toDateString()}}</p>
         <div class="border-b pb-1 bg-white" v-for="(game, index) in Match.games" :key="index">
           <div class="px-2 sm:px-2 md:px-4 lg:px-2 text-xs flex justify-between py-2 bg-white">
-            <div class="flex items-center sm:pr-2">
+            <div class="flex items-center sm:pr-2 w-2/3 justify-end">
               <span>{{game.home.name}}</span>
               <img
                 class="h-8 w-8 lg:h-8 lg:w-8 mx-2"
@@ -21,7 +21,7 @@
                 <span class="mx-1 sm:mx-1">VS</span>
               </div>
             </div>
-            <div class="flex sm:pl-2 items-center">
+            <div class="flex sm:pl-2 items-center w-2/3">
               <img
                 class="h-8 w-8 lg:h-8 lg:w-8 mx-2"
                 :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`"
@@ -35,7 +35,10 @@
           </div>
         </div>
         <div class="px-2 md:px-5 py-2 rounded-b bg-white">
-          <button class="text-sm bg-main w-full py-2 text-white rounded">View All</button>
+          <button
+            class="text-sm bg-main w-full py-2 text-white rounded"
+            @click="viewFixture"
+          >View All</button>
         </div>
       </div>
     </div>
@@ -51,7 +54,10 @@
         </div>
         <div v-for="(tb, index) in Table" :key="index">
           <div v-for="(table, index) in tb.table" :key="index">
-            <div v-if="index <= 4" class="bg-white text-main text-xs lg:text-xs items-center flex py-1 px-1 border-b">
+            <div
+              v-if="index <= 4"
+              class="bg-white text-main text-xs lg:text-xs items-center flex py-1 px-1 border-b"
+            >
               <div class="w-12 text-center">{{index + 1}}</div>
               <div class="w-1/2 items-center flex">
                 <img
@@ -68,7 +74,7 @@
           </div>
         </div>
         <div class="px-2 md:px-5 py-2 rounded-b bg-white">
-          <button class="text-sm bg-main w-full py-2 text-white rounded">View All</button>
+          <button class="text-sm bg-main w-full py-2 text-white rounded" @click="viewTable">View All</button>
         </div>
       </div>
     </div>
@@ -127,7 +133,9 @@ const queryTable = gql`
 export default {
   data() {
     return {
-      Match: "",
+      Match: {
+        date: new Date()
+      },
       Table: ""
     };
   },
@@ -141,6 +149,12 @@ export default {
       apolloClient.query({ query: queryTable }).then(res => {
         this.Table = res.data.Table;
       });
+    },
+    viewFixture: function() {
+      this.$router.push("/fixture");
+    },
+    viewTable: function() {
+      this.$router.push("/table");
     }
   },
   created() {

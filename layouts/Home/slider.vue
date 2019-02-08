@@ -89,8 +89,8 @@
                 </div>
               </div>
             </div>
-            <div class="p-5">
-              <button class="text-sm bg-main w-full py-4 text-white rounded">View All</button>
+            <div class="px-5 py-2">
+              <button class="text-sm bg-main w-full py-2 text-white rounded" @click="viewResult">View All</button>
             </div>
           </div>
         </div>
@@ -139,6 +139,9 @@ export default {
       apolloClient.query({ query: gameQuery }).then(res => {
         this.Results = res.data.Results.slice(0, 2);
       });
+    },
+    viewResult: function() {
+      this.$router.push("/result");
     }
   },
   created() {
