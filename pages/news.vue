@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="lg:mx-16 lg:my-10 md:mx-8 md:my-5 mx-5">
+    <div class="lg:mx-16 lg:my-10 md:mx-8 md:my-5 mx-1">
       <div class="flex flex-wrap">
         <div
           class="w-1/2 cursor-pointer flex flex-col lg:w-1/5 md:w-1/4 sm:w-1/3 cursor-pointer"
