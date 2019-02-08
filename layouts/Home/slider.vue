@@ -5,11 +5,11 @@
         <div class="shadow-lg rounded bg-white p-2">
           <div id="slider">
             <figure class="mx-2">
-              <img src="https://cdn.dribbble.com/users/31752/screenshots/1594741/mountains.png">
-              <img src="https://cdn-images-1.medium.com/max/800/1*I8BCzevLGwkJMArtkRvKDA.png">
-              <img src="https://cdn-images-1.medium.com/max/800/1*vL5707B7J4qheNoaawVqYg.jpeg">
-              <img src="https://cdn-images-1.medium.com/max/2560/1*z-wBmvnov1dnLs7iU9tHzA.png">
-              <img src="https://cdn.dribbble.com/users/31752/screenshots/1594741/mountains.png">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/east_end_lions_.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/east_end_tigers_fc_squad.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/mighty_black_pool.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/mighty_black_pool.jpeg`">
+              <img :src="`https://slpl-server.herokuapp.com/image/Slider/east_end_lions_.jpeg`">
             </figure>
           </div>
         </div>
