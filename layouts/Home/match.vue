@@ -1,14 +1,14 @@
 <template>
   <div class="mt-5 lg:mt-10 flex flex-wrap">
     <div class="w-full lg:w-1/2 py-2 lg:py-0 sm:w-1/2 md:w-full">
-      <div class="sm:mx-1 md:mx-0 lg:mx-2 rounded shadow overflow-hidden">
+      <div class="sm:mx-1 md:mx-0 lg:mr-2 rounded shadow overflow-hidden">
         <p class="bg-green py-2 text-center text-white font-semibold">Match</p>
 
         <p
           class="text-xs bg-white text-grey-darker md:px-2 lg:px-4 pt-4 px-4"
         >{{new Date(Match.date).toDateString()}}</p>
         <div class="border-b pb-1 bg-white" v-for="(game, index) in Match.games" :key="index">
-          <div class="px-2 sm:px-2 md:px-4 text-xs flex justify-between py-2 bg-white">
+          <div class="px-2 sm:px-2 md:px-4 lg:px-2 text-xs flex justify-between py-2 bg-white">
             <div class="flex items-center sm:pr-2">
               <span>{{game.home.name}}</span>
               <img
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="w-full lg:w-1/2 pt-2 lg:py-0 sm:w-1/2 md:w-full">
-      <div class="sm:mx-1 md:mx-0 lg:mx-2 rounded rounded overflow-hidden shadow">
+      <div class="sm:mx-1 md:mx-0 lg:ml-2 rounded rounded overflow-hidden shadow">
         <p class="bg-green py-2 text-center text-white font-semibold">Table</p>
         <div class="bg-white text-main text-xs lg:text-xs flex py-2 px-1 font-semibold">
           <div class="w-12 text-center">Pos</div>

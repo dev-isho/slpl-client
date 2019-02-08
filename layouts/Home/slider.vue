@@ -24,7 +24,7 @@
           <div class="bg-green h-1 rounded-t"></div>
           <div class="bg-white rounded-b overflow-hidden">
             <p class="text-center pt-4 text-main font-semibold">Premier League Board</p>
-            <div>
+            <div v-show="live">
               <p class="pt-4 pl-2 text-main text-sm">Live Score</p>
               <div class="mt-2">
                 <p class="text-xs text-grey-darker md:px-2 lg:px-4 py-2 px-4">Saturday 2 February</p>
@@ -130,7 +130,8 @@ const gameQuery = gql`
 export default {
   data() {
     return {
-      Results: ""
+      Results: "",
+      live: false
     };
   },
   methods: {
