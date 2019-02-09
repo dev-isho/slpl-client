@@ -4,7 +4,7 @@
       <p class="py-5 text-xl lg:w-2/3 lg:text-2xl">{{News.title}}</p>
       <img
         class="shadow mb-5 w-full h-64 lg:h-84 lg:w-2/3"
-        :src="`http://192.168.8.108:4000/image/news/${News.image}`"
+        :src="`https://slpl-server.herokuapp.com/image/news/${News.image}`"
         alt
       >
     </div>
@@ -22,7 +22,7 @@
           <div class="bg-white shadow-md rounded overflow-hidden flex flex-1 flex-col mx-1">
             <img
               class="h-24 md:h-32 w-full"
-              :src="`http://192.168.8.108:4000/image/news/${news.image}`"
+              :src="`https://slpl-server.herokuapp.com/image/news/${news.image}`"
             >
             <div class="p-4 text-sm flex flex-1 flex-col justify-between">
               <p class="font-semibold news">{{news.title}}</p>

@@ -15,7 +15,7 @@
               <div class="h-24 md:h-32 bg-main">
                 <img
                   class="h-24 md:h-32 w-full"
-                  :src="`http://192.168.8.108:4000/image/news/${item.image}`"
+                  :src="`https://slpl-server.herokuapp.com/image/news/${item.image}`"
                 >
               </div>
 
