@@ -12,9 +12,9 @@
             <div
               class="bg-white text-main shadow-md rounded overflow-hidden w-full flex flex-col flex-1"
             >
-              <div class="h-24 lg:h-24 md:w-32 md:h-32 bg-main">
+              <div class="h-24 md:h-32 bg-main">
                 <img
-                  class="h-24 lg:h-24 md:w-32 md:h-32 w-full"
+                  class="h-24 md:h-32 w-full"
                   :src="`http://192.168.8.108:4000/image/news/${item.image}`"
                 >
               </div>
