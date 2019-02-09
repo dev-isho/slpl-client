@@ -7,6 +7,7 @@
           class="w-1/2 lg:w-1/3 sm:w-1/2 md:w-1/2 sm:py-0 md:py-2 py-2 flex flex-col"
           v-for="(item, index) in News"
           :key="index"
+          @click="viewNews(news._id)"
         >
           <div class="bg-white shadow-md rounded overflow-hidden flex flex-1 flex-col mx-1">
             <img
@@ -50,6 +51,9 @@ export default {
       apolloClient.query({ query: newsQuery }).then(res => {
         this.News = res.data.News;
       });
+    },
+    viewNews: function(id) {
+      this.$router.push("/news/view/" + id);
     }
   },
   created() {
