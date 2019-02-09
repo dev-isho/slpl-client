@@ -15,9 +15,11 @@
                   alt
                 >
               </div>
-              <div
-                class="bg-main text-white py-1 px-2 mx-2 text-center text-xs flex font-semibold"
-              ><span>{{game.homeGoals}}</span><span class="mx-1"> - </span><span>{{game.awayGoals}}</span></div>
+              <div class="bg-main text-white py-1 px-2 mx-2 text-center text-xs flex font-semibold">
+                <span>{{game.homeGoals}}</span>
+                <span class="mx-1">-</span>
+                <span>{{game.awayGoals}}</span>
+              </div>
               <div class="w-2/3 mx-2 text-sm flex items-center">
                 <img
                   class="w-8 h-8"
