@@ -94,7 +94,7 @@
           <div class="flex flex-wrap">
             <div class="w-screen flex justify-center">
               <div class="w-1/2">
-                <div class="m-2">
+                <div class="m-1 sm:m-2">
                   <div class="border rounded shadow-md p-2 bg-white mx-1">
                     <p class="text-xs text-center block py-2">2018/19 Home Kit</p>
                     <div class="text-center">
@@ -104,7 +104,7 @@
                 </div>
               </div>
               <div class="w-1/2">
-                <div class="m-2">
+                <div class="m-1 sm:m-2">
                   <div class="border rounded shadow-md p-2 bg-white mx-1">
                     <p class="text-xs text-center block py-2">2018/19 Away Kit</p>
                     <div class="text-center">
