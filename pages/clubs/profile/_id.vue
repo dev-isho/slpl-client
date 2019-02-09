@@ -42,7 +42,7 @@
         </div>
         <div class="w-1/5 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
-            :to="`/clubs/${this.$route.params.id}/squad`"
+            :to="`/clubs/profile/${this.$route.params.id}/squad`"
             class="block no-underline text-center text-xs py-2 md:text-sm text-main text-white font-semibold"
             active-class="bg-grey-light"
             exact
@@ -50,21 +50,21 @@
         </div>
         <div class="w-1/5 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
-            :to="`/clubs/${this.$route.params.id}/fixture`"
+            :to="`/clubs/profile/${this.$route.params.id}/fixture`"
             class="block no-underline text-center text-xs py-2 md:text-sm text-white font-semibold"
             active-class="bg-grey-light"
           >Fixture</nuxt-link>
         </div>
         <div class="w-1/6 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
-            :to="`/clubs/${this.$route.params.id}/result`"
+            :to="`/clubs/profile/${this.$route.params.id}/result`"
             class="block no-underline text-center text-xs py-2 md:text-sm text-white font-semibold"
             active-class="bg-grey-light"
           >Result</nuxt-link>
         </div>
         <div class="w-1/6 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
-            :to="`/clubs/${this.$route.params.id}/directory`"
+            :to="`/clubs/profile/${this.$route.params.id}/directory`"
             class="block no-underline text-xs text-center py-2 md:text-sm text-white font-semibold"
             active-class="bg-grey-light"
           >Directory</nuxt-link>

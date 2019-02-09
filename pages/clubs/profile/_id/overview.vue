@@ -14,13 +14,13 @@
               >
                 <div class="w-1/2 flex justify-end pr-2 items-center">
                   <span class="mr-2 text-xs">{{game.home.name}}</span>
-                  <img class="w-6 h-6" :src="`http://192.168.8.108:4000/image/${game.home.image}`">
+                  <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`">
                 </div>
                 <div
                   class="bg-green items-center flex text-white py-1 px-2 text-center text-xs font-semibold"
                 >VS</div>
                 <div class="w-1/2 pl-2 flex items-center">
-                  <img class="w-6 h-6" :src="`http://192.168.8.108:4000/image/${game.away.image}`">
+                  <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`">
                   <span class="ml-2 text-xs">{{game.away.name}}</span>
                 </div>
               </div>
@@ -40,7 +40,7 @@
               >
                 <div class="w-1/2 flex justify-end pr-2 items-center">
                   <span class="mr-2 text-xs">{{game.home.name}}</span>
-                  <img class="w-6 h-6" :src="`http://192.168.8.108:4000/image/${game.home.image}`">
+                  <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`">
                 </div>
                 <div
                   class="bg-green items-center flex text-white py-1 px-2 text-center text-xs font-semibold"
@@ -49,7 +49,7 @@
                   <span class="ml-1">{{game.awayGoals}}</span>
                 </div>
                 <div class="w-1/2 pl-2 flex items-center">
-                  <img class="w-6 h-6" :src="`http://192.168.8.108:4000/image/${game.away.image}`">
+                  <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`">
                   <span class="ml-2 text-xs">{{game.away.name}}</span>
                 </div>
               </div>
@@ -78,7 +78,7 @@
                   <div class="w-2/3 pl-1 flex items-center">
                     <img
                       class="w-6 h-6"
-                      :src="`http://192.168.8.108:4000/image/${table.team.image}`"
+                      :src="`https://slpl-server.herokuapp.com/image/${table.team.image}`"
                     >
                     <p class="ml-2">{{table.team.name}}</p>
                   </div>
@@ -148,7 +148,7 @@
                 <div class="bg-white shadow-md rounded overflow-hidden flex flex-1 flex-col mx-1">
                   <img
                     class="h-24 md:h-32 w-full"
-                    :src="`http://192.168.8.108:4000/image/news/${item.image}`"
+                    :src="`https://slpl-server.herokuapp.com/image/news/${item.image}`"
                   >
                   <div class="p-4 text-sm flex flex-1 flex-col justify-between">
                     <p class="font-semibold news">{{item.title}}</p>
