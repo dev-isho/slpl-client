@@ -98,7 +98,7 @@
                   <div class="border rounded shadow-md p-2 bg-white mx-1">
                     <p class="text-xs text-center block py-2">2018/19 Home Kit</p>
                     <div class="text-center">
-                      <img class="h-48 mt-5" src="../../../../assets/images/Photo-Missing.png">
+                      <img class="h-32 md:h-48 mt-5" src="../../../../assets/images/Photo-Missing.png">
                     </div>
                   </div>
                 </div>
@@ -108,7 +108,7 @@
                   <div class="border rounded shadow-md p-2 bg-white mx-1">
                     <p class="text-xs text-center block py-2">2018/19 Away Kit</p>
                     <div class="text-center">
-                      <img class="h-48 mt-5" src="../../../../assets/images/Photo-Missing.png">
+                      <img class="h-32 md:h-48 mt-5" src="../../../../assets/images/Photo-Missing.png">
                     </div>
                   </div>
                 </div>
