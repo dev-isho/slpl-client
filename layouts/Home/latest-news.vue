@@ -32,6 +32,7 @@ import gql from "graphql-tag";
 const newsQuery = gql`
   query News {
     News {
+      _id
       date
       title
       subTitle
