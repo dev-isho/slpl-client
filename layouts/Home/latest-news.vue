@@ -12,7 +12,7 @@
           <div class="bg-white shadow-md rounded overflow-hidden flex flex-1 flex-col mx-1">
             <img
               class="h-24 md:h-32 w-full"
-              :src="`http://192.168.8.108:4000/image/news/${item.image}`"
+              :src="`https://slpl-server.herokuapp.com/image/news/${item.image}`"
             >
             <div class="p-4 text-sm flex flex-1 flex-col justify-between">
               <p class="font-semibold news">{{item.title}}</p>
