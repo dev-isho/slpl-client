@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import apolloClient from "../plugins/apolloClient.js";
+import apolloClient from "../../plugins/apolloClient.js";
 import gql from "graphql-tag";
 
 const newsQuery = gql`
