@@ -1,6 +1,6 @@
 <template>
-  <div class="m-2 sm:mx-5 md:mx-10 lg:mx-16 lg:px-10 lg:my-10 py-2 px-2 rounded shadow-md bg-white">
-    <p class="ml-2 pt-2">Fixtures</p>
+  <div class="m-2 sm:mx-5 md:mx-10 lg:mx-16 lg:px-10 lg:my-10 py-2 px-2">
+    <p class="ml-2 pt-2 text-sm font-semibold mb-5">Fixtures</p>
     <div class="" v-for="(match, index) in Fixtures" :key="index">
       <p
         class="pb-2 border-b text-xs pl-2 pt-4"

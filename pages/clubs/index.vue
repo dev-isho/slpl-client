@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-wrap py-2 px-2 md:p-5">
+    <div class="flex flex-wrap py-2 px-2 md:px-10 py-12">
       <div
         class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex flex-col"
         v-for="(team, index) in Teams"

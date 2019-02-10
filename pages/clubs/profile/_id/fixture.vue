@@ -1,6 +1,6 @@
 <template>
-  <div class="pt-5 lg:mx-16">
-    <div class="mx-2 bg-white my-2 p-2 rounded shadow-md">
+  <div class="pt-5 lg:mx-16 lg:px-5">
+    <div class="mx-2 my-2 p-2">
       <div class="mt-2" v-for="(fix, index) in Fixture" :key="index">
         <p
           class="pb-5 mx-2 border-b text-sm"

@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-grey-light">
-    <div class="pt-5 lg:mx-16">
+  <div>
+    <div class="pt-5 lg:mx-16 lg:px-10">
       <div class="flex flex-wrap">
         <div class="w-full md:w-1/3">
-          <div class="border mt-2 mx-2 rounded bg-white shadow-md">
-            <p class="p-2 text-sm border-b">Fixtures</p>
+          <div class="border mt-2 mx-2 rounded bg-grey-darkest text-white shadow-md">
+            <p class="p-2 text-sm border-b font-semibold">Fixtures</p>
             <div class="pt-2" v-for="(fix, index) in Fixture" :key="index">
-              <p class="text-xs px-2 text-grey-darker">{{new Date(fix.date).toDateString()}}</p>
+              <p class="text-xs px-2 text-white">{{new Date(fix.date).toDateString()}}</p>
               <div
                 class="border-b flex pt-4 pb-2 items-center justify-between"
                 v-for="(game, index) in fix.games"
@@ -14,25 +14,34 @@
               >
                 <div class="w-1/2 flex justify-end pr-2 items-center">
                   <span class="mr-2 text-xs">{{game.home.name}}</span>
-                  <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`">
+                  <img
+                    class="w-6 h-6"
+                    :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`"
+                  >
                 </div>
                 <div
                   class="bg-green items-center flex text-white py-1 px-2 text-center text-xs font-semibold"
                 >VS</div>
                 <div class="w-1/2 pl-2 flex items-center">
-                  <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`">
+                  <img
+                    class="w-6 h-6"
+                    :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`"
+                  >
                   <span class="ml-2 text-xs">{{game.away.name}}</span>
                 </div>
               </div>
             </div>
             <div class="px-5 py-2">
-              <button class="text-sm bg-main w-full py-2 text-white rounded">View All</button>
+              <button
+                class="text-sm bg-green w-full py-2 text-white rounded"
+                @click="viewFix"
+              >View All</button>
             </div>
           </div>
-          <div class="border mt-2 mx-2 rounded bg-white shadow-md">
-            <p class="p-2 border-b text-sm">Results</p>
+          <div class="border mt-2 mx-2 rounded bg-grey-darkest text-white shadow-md">
+            <p class="p-2 border-b text-sm font-semibold">Results</p>
             <div class="pt-2" v-for="(res, index) in Result" :key="index">
-              <p class="text-xs px-2 text-grey-darker">{{new Date(res.date).toDateString()}}</p>
+              <p class="text-xs px-2 text-white">{{new Date(res.date).toDateString()}}</p>
               <div
                 class="border-b flex pt-4 pb-2 items-center justify-between"
                 v-for="(game, index) in res.games"
@@ -40,7 +49,10 @@
               >
                 <div class="w-1/2 flex justify-end pr-2 items-center">
                   <span class="mr-2 text-xs">{{game.home.name}}</span>
-                  <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`">
+                  <img
+                    class="w-6 h-6"
+                    :src="`https://slpl-server.herokuapp.com/image/${game.home.image}`"
+                  >
                 </div>
                 <div
                   class="bg-green items-center flex text-white py-1 px-2 text-center text-xs font-semibold"
@@ -49,19 +61,22 @@
                   <span class="ml-1">{{game.awayGoals}}</span>
                 </div>
                 <div class="w-1/2 pl-2 flex items-center">
-                  <img class="w-6 h-6" :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`">
+                  <img
+                    class="w-6 h-6"
+                    :src="`https://slpl-server.herokuapp.com/image/${game.away.image}`"
+                  >
                   <span class="ml-2 text-xs">{{game.away.name}}</span>
                 </div>
               </div>
             </div>
             <div class="px-5 py-2">
-              <button class="text-sm bg-main w-full py-2 text-white rounded">View All</button>
+              <button class="text-sm bg-green w-full py-2 text-white rounded">View All</button>
             </div>
           </div>
-          <div class="border bg-white shadow-md my-4 mx-2 rounded">
-            <p class="p-2 text-sm border-b">Premier League</p>
+          <div class="border bg-grey-darkest text-white shadow-md my-4 mx-2 rounded">
+            <p class="p-2 text-sm border-b font-semibold">Premier League</p>
             <div class="pt-2">
-              <div class="mt-1 text-xs border-b pb-2 text-grey-darker flex font-semibold mb-2 px-2">
+              <div class="mt-1 text-xs border-b pb-2 text-white flex font-semibold mb-2 px-2">
                 <div class="w-10 text-center">Pos</div>
                 <div class="w-2/3 pl-1">Team</div>
                 <div class="w-10 text-center">Pl</div>
@@ -70,7 +85,7 @@
               </div>
               <div v-for="(tb, index) in Table" :key="index">
                 <div
-                  class="border-b flex py-2 items-center text-xs px-2 text-main font-semibold"
+                  class="border-b flex py-2 items-center text-xs px-2"
                   v-for="(table, index) in tb.table"
                   :key="index"
                 >
@@ -95,20 +110,26 @@
             <div class="w-screen flex justify-center">
               <div class="w-1/2">
                 <div class="m-1 sm:m-2">
-                  <div class="border rounded shadow-md p-2 bg-white mx-1">
+                  <div class="border rounded shadow-md p-2 bg-grey-darkest mx-1 text-white">
                     <p class="text-xs text-center block py-2">2018/19 Home Kit</p>
                     <div class="text-center">
-                      <img class="h-32 md:h-48 mt-5" src="../../../../assets/images/Photo-Missing.png">
+                      <img
+                        class="h-32 md:h-48 mt-5"
+                        src="../../../../assets/images/Photo-Missing.png"
+                      >
                     </div>
                   </div>
                 </div>
               </div>
               <div class="w-1/2">
                 <div class="m-1 sm:m-2">
-                  <div class="border rounded shadow-md p-2 bg-white mx-1">
-                    <p class="text-xs text-center block py-2">2018/19 Away Kit</p>
+                  <div class="border rounded shadow-md p-2 bg-grey-darkest mx-1">
+                    <p class="text-xs text-center block py-2 text-white">2018/19 Away Kit</p>
                     <div class="text-center">
-                      <img class="h-32 md:h-48 mt-5" src="../../../../assets/images/Photo-Missing.png">
+                      <img
+                        class="h-32 md:h-48 mt-5"
+                        src="../../../../assets/images/Photo-Missing.png"
+                      >
                     </div>
                   </div>
                 </div>
@@ -116,15 +137,15 @@
             </div>
             <div class="w-full md:flex">
               <div class="my-2 mx-2 md:w-1/2">
-                <div class="border rounded shadow-md p-2 bg-white mx-1">
-                  <p class="text-xs py-2 text-center block pt-2">National Insurance Company Limited</p>
+                <div class="border rounded shadow-md p-2 bg-grey-darkest mx-1">
+                  <p class="text-xs py-2 text-center block pt-2 text-white">National Insurance Company Limited</p>
                   <div class="text-center">
                     <img class="h-48 mt-2" src="../../../../assets/images/NIC-LOGOtest1.png">
                   </div>
                 </div>
               </div>
               <div class="my-2 mx-2 md:w-1/2">
-                <div class="border rounded shadow-md p-2 bg-white mx-1">
+                <div class="border rounded shadow-md p-2 bg-grey-darkest text-white mx-1">
                   <p class="text-xs py-2 text-center block">Skye Bank</p>
                   <div class="text-center">
                     <img
@@ -281,6 +302,12 @@ export default {
       apolloClient.query({ query: newsQuery }).then(res => {
         this.News = res.data.News;
       });
+    },
+    viewFix: function() {
+      this.$router.push(`/clubs/profile/${this.$route.params.id}/fixture`);
+    },
+    viewResult: function() {
+      this.$router.push(`/clubs/profile/${this.$route.params.id}/result`);
     },
     viewNews: function(id) {
       this.$router.push("/news/view/" + id);

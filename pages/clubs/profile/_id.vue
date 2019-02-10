@@ -35,43 +35,43 @@
         <div class="w-1/5 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
             :to="`/clubs/profile/${this.$route.params.id}/overview`"
-            class="block no-underline text-center text-xs py-2 md:text-sm text-main text-white font-semibold"
-            active-class="bg-grey-light"
+            class="block no-underline text-center text-xs py-2 md:text-sm text-main text-main font-semibold"
+            active-class="bg-white"
             exact
           >Overview</nuxt-link>
         </div>
         <div class="w-1/5 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
             :to="`/clubs/profile/${this.$route.params.id}/squad`"
-            class="block no-underline text-center text-xs py-2 md:text-sm text-main text-white font-semibold"
-            active-class="bg-grey-light"
+            class="block no-underline text-center text-xs py-2 md:text-sm text-main text-main font-semibold"
+            active-class="bg-white"
             exact
           >Squad</nuxt-link>
         </div>
         <div class="w-1/5 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
             :to="`/clubs/profile/${this.$route.params.id}/fixture`"
-            class="block no-underline text-center text-xs py-2 md:text-sm text-white font-semibold"
-            active-class="bg-grey-light"
+            class="block no-underline text-center text-xs py-2 md:text-sm text-main font-semibold"
+            active-class="bg-white"
           >Fixture</nuxt-link>
         </div>
         <div class="w-1/6 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
             :to="`/clubs/profile/${this.$route.params.id}/result`"
-            class="block no-underline text-center text-xs py-2 md:text-sm text-white font-semibold"
-            active-class="bg-grey-light"
+            class="block no-underline text-center text-xs py-2 md:text-sm text-main font-semibold"
+            active-class="bg-white"
           >Result</nuxt-link>
         </div>
         <div class="w-1/6 bg-green rounded-t overflow-hidden mx-1">
           <nuxt-link
             :to="`/clubs/profile/${this.$route.params.id}/directory`"
-            class="block no-underline text-xs text-center py-2 md:text-sm text-white font-semibold"
-            active-class="bg-grey-light"
+            class="block no-underline text-xs text-center py-2 md:text-sm text-main font-semibold"
+            active-class="bg-white"
           >Directory</nuxt-link>
         </div>
       </div>
     </div>
-    <div class="bg-grey-light mb-10">
+    <div class="bg-white">
       <nuxt/>
     </div>
   </div>

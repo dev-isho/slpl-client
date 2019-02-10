@@ -1,6 +1,6 @@
 <template>
-  <div class="m-2 sm:mx-5 md:mx-10 lg:mx-16 lg:px-10 lg:my-10 py-2 px-2 rounded shadow-md bg-white">
-    <p class="ml-2 pt-2">Results</p>
+  <div class="m-2 sm:mx-5 md:mx-10 lg:mx-16 lg:px-10 lg:my-10 py-2 px-2">
+    <p class="ml-2 pt-2 font-semibold mb-5">Results</p>
     <div class v-for="(result, index) in Results" :key="index">
       <p class="pb-2 border-b text-xs pl-2 pt-4">{{new Date(result.date).toDateString()}}</p>
       <div>

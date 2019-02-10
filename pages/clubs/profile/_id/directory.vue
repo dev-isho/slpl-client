@@ -1,6 +1,6 @@
 <template>
-  <div class="pt-5 lg:mx-16">
-    <div class="mx-2 bg-white my-2 p-2 rounded shadow-md">
+  <div class="pt-5 lg:mx-16 lg:px-5">
+    <div class="mx-2 my-2 p-2">
       <div>
         <div class="px-1 md:px-2">
           <p class="text-xl md:text-2xl">{{Team.name}}</p>

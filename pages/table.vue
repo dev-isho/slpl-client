@@ -1,6 +1,6 @@
 <template>
-  <div class="m-2 sm:mx-5 md:mx-10 lg:mx-16 lg:px-10 lg:my-10 py-2 px-2 rounded shadow-md bg-white">
-    <p class="ml-2 pt-2">Table</p>
+  <div class="m-2 sm:mx-5 md:mx-10 lg:mx-16 lg:px-10 lg:my-10 py-2 px-2">
+    <p class="ml-2 pt-2 font-semibold text-sm mb-5">Table</p>
     <div>
       <div class="flex flex-wrap mt-1 items-center">
         <div class="w-1/2 md:w-1/4">
