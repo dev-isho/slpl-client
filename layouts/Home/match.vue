@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5 lg:mt-10 flex flex-wrap">
     <div class="w-full lg:w-1/2 py-2 lg:py-0 sm:w-1/2 md:w-full">
-      <div class="sm:mx-1 md:mx-0 lg:mr-2 rounded shadow overflow-hidden">
+      <div class="sm:mx-1 md:mx-0 lg:mr-2 rounded shadow overflow-hidden border border-green">
         <p class="bg-green py-2 text-center text-white font-semibold">Match</p>
 
         <p
@@ -36,14 +36,14 @@
         </div>
         <div class="px-2 md:px-5 py-2 rounded-b bg-white">
           <button
-            class="text-sm bg-main w-full py-2 text-white rounded"
+            class="text-sm bg-green w-full py-2 text-white rounded"
             @click="viewFixture"
           >View All</button>
         </div>
       </div>
     </div>
     <div class="w-full lg:w-1/2 pt-2 lg:py-0 sm:w-1/2 md:w-full">
-      <div class="sm:mx-1 md:mx-0 lg:ml-2 rounded rounded overflow-hidden shadow">
+      <div class="sm:mx-1 md:mx-0 lg:ml-2 rounded rounded overflow-hidden shadow border border-green">
         <p class="bg-green py-2 text-center text-white font-semibold">Table</p>
         <div class="bg-white text-main text-xs lg:text-xs flex py-2 px-1 font-semibold">
           <div class="w-12 text-center">Pos</div>
@@ -74,7 +74,7 @@
           </div>
         </div>
         <div class="px-2 md:px-5 py-2 rounded-b bg-white">
-          <button class="text-sm bg-main w-full py-2 text-white rounded" @click="viewTable">View All</button>
+          <button class="text-sm bg-green w-full py-2 text-white rounded" @click="viewTable">View All</button>
         </div>
       </div>
     </div>

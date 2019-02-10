@@ -2,7 +2,7 @@
   <div class="py-1 lg:py-16">
     <div class="flex flex-wrap">
       <div class="w-full md:w-3/5 lg:w-2/3 md:pr-5 lg:pr-10 py-2 md:py-0">
-        <div class="shadow-lg rounded bg-white p-2">
+        <div class="shadow-lg rounded bg-white p-2 border border-green">
           <div id="slider">
             <figure class="mx-2">
               <img :src="`https://slpl-server.herokuapp.com/image/Slider/slider1.jpeg`">
@@ -21,8 +21,7 @@
       </div>
       <div class="w-full md:w-2/5 lg:w-1/3">
         <div class="shadow-lg">
-          <div class="bg-green h-1 rounded-t"></div>
-          <div class="bg-white rounded-b overflow-hidden">
+          <div class="bg-white rounded overflow-hidden border border-green">
             <p class="text-center pt-4 text-main font-semibold">Premier League Board</p>
             <div v-show="live">
               <p class="pt-4 pl-2 text-main text-sm">Live Score</p>
@@ -90,7 +89,7 @@
               </div>
             </div>
             <div class="px-5 py-2">
-              <button class="text-sm bg-main w-full py-2 text-white rounded" @click="viewResult">View All</button>
+              <button class="text-sm bg-green w-full py-2 text-white rounded" @click="viewResult">View All</button>
             </div>
           </div>
         </div>
