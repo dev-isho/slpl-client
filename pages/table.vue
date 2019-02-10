@@ -19,16 +19,6 @@
             </select>
           </div>
         </div>
-        <div class="w-1/2 md:w-1/4">
-          <div class="px-2 pb-5 pt-2">
-            <p class="text-xs text-grey-darker ml-4">Filter by Home or Away</p>
-            <select class="bg-transparent w-full py-2 border-b text-xs">
-              <option value class="text-sm">All Matches</option>
-              <option value class="text-sm">Home</option>
-              <option value class="text-sm">Away</option>
-            </select>
-          </div>
-        </div>
         <div class="w-1/2 md:w-1/5 lg:w-1/6">
           <div
             class="mx-2 text-sm rounded bg-yellow-dark text-white font-semibold flex items-center justify-center py-2"
