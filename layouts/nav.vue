@@ -57,7 +57,7 @@
       >Players</nuxt-link>
       <nuxt-link
         active-class="bg-green"
-        to="/stats"
+        to="/stats/dashboard"
         class="text-white lg:w-auto p-5 text-sm block no-underline"
       >Stats</nuxt-link>
     </div>
